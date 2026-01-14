@@ -1,1 +1,200 @@
+Hotel Booking Cancellation Analysis
+Analyzing Booking Patterns and Cancellation Drivers in Portuguese Hotels
+Project Overview
 
+Tools: Python | SQL | Power BI
+The Challenge
+Two hotels in Portugal—a city property and a resort location—are experiencing significant booking cancellations that impact revenue and operational efficiency. This analysis examines over 100,000 reservations to identify why guests cancel and how the business can reduce cancellation rates.
+Project Goals
+
+Analyze current booking and cancellation performance
+Identify high-risk customer segments and booking patterns
+Quantify revenue impact from cancellations
+Develop data-driven strategies to minimize future cancellations
+
+
+Dataset Information
+Source: Kaggle Hotel Booking Demand Dataset
+Period: July 2015 - August 2017
+Records: 100,000+ hotel reservations
+Scope: Two properties in Portugal (City Hotel in Lisbon, Resort Hotel in Algarve)
+Technical Stack
+Python Libraries:
+
+Pandas (data manipulation)
+NumPy (numerical operations)
+Matplotlib (visualizations)
+Datetime (temporal analysis)
+
+SQL Techniques:
+
+Common Table Expressions (CTEs)
+Aggregate functions and window functions
+Complex joins and case statements
+
+Power BI:
+
+DAX calculations for custom metrics
+Interactive dashboards
+Data modeling and relationship management
+
+
+Analysis Framework
+Phase 1: Understanding the Problem
+Identified that the Revenue Manager faces a critical challenge: nearly 30% of bookings are cancelled, creating uncertainty in revenue forecasting and room inventory management.
+Phase 2: Data Exploration
+Through exploratory data analysis, I discovered several key pain points:
+
+High cancellation rates among specific booking channels
+Correlation between booking lead time and cancellation probability
+Revenue loss concentration in certain guest segments
+
+Phase 3: Deep Dive Analysis
+Focused analysis on three critical dimensions:
+
+Business Performance: Overall metrics and trends
+Guest Behavior: Booking and cancellation patterns
+Operations: Impact on day-to-day hotel management
+
+
+Key Findings
+Overall Performance (July 2015 - August 2017)
+MetricValueTotal Bookings86,113Confirmed Bookings62,109 (72%)Cancelled Bookings24,004 (28%)Total Revenue$34.41MRevenue Lost to Cancellations$11.48M (33.4%)
+Critical Discovery: The "No Deposit" Problem
+95.8% of all cancellations came from bookings with no deposit requirement—revealing that flexible booking policies, while attractive to customers, create significant business risk.
+Booking Window Patterns
+Guests who book further in advance are significantly more likely to cancel:
+
+180+ days advance: 60-100% cancellation rate
+91-180 days advance: 60-100% cancellation rate
+31-90 days advance: Moderate cancellation rate
+0-30 days advance: Lowest cancellation rate
+
+Insight: Early bookers are securing rooms as a "placeholder" with no financial commitment, then cancelling when plans change or better options appear.
+Geographic & Channel Analysis
+European guests:
+
+Generated 88.5% of total revenue ($30M)
+Contributed 86.8% of all cancellations
+
+Travel Agent/Tour Operator (TA/TO) channel:
+
+Produced highest revenue ($29M)
+Accounted for 89% of total cancellations
+
+Guest Profile: The High-Risk Segment
+New Customers (First-Time Bookers):
+
+Represent 99% of all cancellations
+Lack loyalty or commitment to the property
+Primarily domestic Portuguese travelers
+Book 31-180 days in advance
+Generate $8.6M in lost revenue
+
+
+Operational Impact
+Last-Minute Cancellation Crisis
+City Hotel (Lisbon):
+
+761 cancellations within 7 days of check-in
+239 same-day cancellations (day of arrival)
+Unable to resell rooms with zero notice
+
+Resort Hotel (Algarve):
+
+212 cancellations within 7 days of check-in
+92 same-day cancellations
+Particularly problematic during peak season
+
+Combined Impact: 331 rooms cancelled on check-in day with no opportunity to recover revenue—directly reducing occupancy and profitability.
+
+Strategic Recommendations
+1. Implement Smart Deposit Requirements
+Target: Early-bird bookings (120+ days in advance)
+Strategy:
+
+Require a small deposit for bookings made 4+ months ahead
+Offer discounted rates in exchange for deposit commitment
+Convert "non-guaranteed" reservations into confirmed bookings
+
+Expected Impact: Reduce casual cancellations while maintaining booking volume
+2. Strengthen Cancellation Policies
+City Hotel Policy:
+
+Free cancellation up to 48 hours before arrival
+Charge one night's rate for cancellations within 48 hours
+Clearly communicate policy at booking and via email reminders
+
+Resort Hotel Policy:
+
+Free cancellation up to 7 days before arrival
+Charge one night's rate for cancellations within 7 days
+Provide advance notice to reduce last-minute cancellations
+
+Expected Impact: Reduce same-day cancellations and late cancellations by 2-5%
+3. Build Guest Loyalty Programs
+Challenge: 99% of cancellations are from first-time guests
+Initiatives:
+
+Create rewards program for repeat bookings
+Offer exclusive perks for returning guests
+Develop targeted retention campaigns
+Convert one-time bookers into loyal customers
+
+Expected Impact: Transform "non-guaranteed" guests into reliable, repeat customers
+4. Promote Direct Booking Channel
+Current State: Direct bookings represent only 14% of total bookings but have much lower cancellation rates (8%)
+Strategy:
+
+Offer best rate guarantee for direct bookings
+Reduce reliance on TA/TO channels
+Build direct relationship with customers
+Lower commission costs while improving booking quality
+
+Expected Impact: Shift booking mix toward lower-risk, higher-margin direct reservations
+5. Dynamic Last-Minute Marketing
+Opportunity: Rooms cancelled within 7 days of arrival
+Tactics:
+
+Automated email campaigns for last-minute availability
+Flash sales to fill cancelled rooms
+Partnerships with local businesses for same-day bookings
+Mobile-optimized booking for spontaneous travelers
+
+Expected Impact: Recover revenue from unavoidable cancellations
+
+Expected Business Outcomes
+By implementing these recommendations, the hotels can expect:
+
+Cancellation rate reduction: 28% → 20-22% (target)
+Revenue recovery: $2-3M annually from reduced cancellations
+Improved occupancy: Better inventory management and resale capability
+Stronger customer relationships: Higher percentage of repeat guests
+Lower distribution costs: Reduced dependency on commission-heavy channels
+
+
+Technical Methodology
+Data Processing Pipeline
+
+Python Data Cleaning:
+
+Removed duplicates and null values
+Standardized data types and formats
+Validated data integrity across 100K+ records
+Identified and handled outliers
+
+
+SQL Analysis:
+
+Complex queries to segment customer behavior
+Temporal analysis of booking and cancellation patterns
+Revenue calculations and aggregations
+Multi-dimensional filtering for targeted insights
+
+
+Power BI Visualization:
+
+Interactive dashboards for stakeholder exploration
+DAX measures for dynamic KPI calculations
+Drill-down capabilities by segment, time, and property
+Executive summary views for decision-makers
